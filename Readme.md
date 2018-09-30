@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Littletheodore](https://up.htmlacademy.ru/adaptive/15/user/611413).
-* Наставник: `Неизвестно`.
+* Наставник: [Артем Альтигин](https://htmlacademy.ru/profile/artem).
 
 ---
 
