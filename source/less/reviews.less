@@ -1,0 +1,75 @@
+/*<section class="reviews">
+<h2 class="reviews__heading main-heading">Отзывы</h2>
+<article class="reviews__post">
+  <span class="rewiews-post--main">Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
+    стильными, а также набирают больше лайков!</span>
+  <b class="rewiews-post--author">Анастасия Красильникова</b>
+  <span class="rewiews-post--insta">&#64;misssssiskras</span>
+</article>
+<div class="reviews__controls">
+  <a class="reviews__skip reviews__skip--left" href="#"></a>
+  <a class="reviews__skip reviews__skip--right" href="#"></a>
+</div>
+<a class="reviews__write button" href="#">Написать</a>
+</section>
+*/
+
+.reviews {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px 45px;
+}
+
+.reviews .reviews__heading {
+  padding: 0;
+  margin: 0 0 30px;
+  text-align: left;
+}
+
+.reviews .reviews__post {
+  font-family: "Open Sans", "Arial", serif;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
+  color: #444444;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__post .reviews__post--main {
+  margin-bottom: 30px;
+}
+
+.reviews__post .reviews__post--author {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.reviews__post .reviews__post--insta {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.reviews .reviews__write {
+font-size: 15px;
+line-height: 30px;
+}
+
+.reviews::after {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat;
+  background-size: contain;
+}
