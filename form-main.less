@@ -1,0 +1,44 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: @white;
+}
+
+.form .form__heading {
+  display: block;
+  text-align: center;
+  margin: 0;
+  padding: 70px 0;
+  background-color: #f1f1f1;
+}
+/*tablet-version*/
+@media (min-width:768px) {
+  .form__heading {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 12px;
+      bottom: 0;
+      left: 0;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat;
+      background-size: auto;
+    }
+  }
+}
+/*desktop-version*/
+@media (min-width:1250px) {
+  /*.catalog {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 130px 50px 60px;
+    justify-content: space-between;
+  }*/
+  .form__heading {
+    width: 100%;
+  }
+}

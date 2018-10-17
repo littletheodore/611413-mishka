@@ -1,36 +1,35 @@
+
 .page-header {
-  background-color: #ffffff;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: @white;
 }
 
 .page-header__nav {
-  margin: 0;
-  padding: 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
 .page-header__nav ul {
-  width: 100%;
-  list-style: none;
   display: none;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .page-header__nav a {
   display: block;
+  margin: 0 auto;
   text-align: left;
   text-decoration: none;
-  font-family: "Open Sans", "Arial", serif;
-  font-size: 17px;
-  line-height: 24px;
   font-weight: bold;
-  color: #000000;
+  color: @black;
 }
 
 .page-header__nav .page-header_list--on {
@@ -38,8 +37,10 @@
   flex-wrap: wrap;
 }
 
-.page-header__nav .page-header__menu--button {
+.page-header__menu--button {
   display: none;
+  border: none;
+  background-color: @white;
 }
 
 .page-header__user-list li {
@@ -50,13 +51,13 @@
 .page-header__user-list .search-icon::before {
   position: absolute;
   content: "";
+  top: 30px;
+  left: 30px;
   width: 20px;
   height: 19px;
   background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
-  top: 30px;
-  left: 30px;
 }
 
 .page-header__user-list .basket-icon::before {
@@ -65,31 +66,40 @@
 /*mobile-version*/
 @media (min-width: 150px) and (max-width: 767px) {
   .page-header__nav li {
-    width: 100%;
+    width: 320px;
     padding: 30px 10px 30px 75px;
-    border-bottom: 1px solid #ececec;
+    margin: 0 auto;
+    border-bottom: 1px solid @gray;
   }
 
-  .page-header__logo {
-    display: block;
+  .page-header__nav .page-header__logo {
     position: relative;
-    padding: 23px 30px 18px;
+    width: 320px;
+    padding: 23px 0 18px;
     text-align: center;
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid @gray;
   }
 
-  .page-header--logo-image {
+  .page-header__logo--image {
     width: 86px;
     height: 35px;
   }
 
-  .page-header__nav .page-header__menu--button {
-    display: block;
+  .page-header__menu--button {
     position: absolute;
-    top: 32px;
-    right: 23px;
-    background-color: #ffffff;
-    border: none;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    background-image: url("../img/icon-menu-open.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .button-off {
+    background-image: url("../img/icon-menu-close.svg");
   }
 
   .page-header__nav .page-header__delivery,
@@ -100,8 +110,8 @@
 /*tablet-version*/
 @media (min-width: 768px) {
   .page-header {
-    display: flex;
     position: relative;
+    display: flex;
   }
 
   .page-header .page-header__logo {
@@ -112,32 +122,29 @@
   }
 
   .page-header .page-header__nav {
-    background-color: #fafafa;
+    width: 768px;
+    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    background-color: #fafafa;
   }
 
   .page-header__nav .page-header__user-list {
-    background-color: #ffffff;
     display: flex;
-    padding: 0 50px;
-    margin-left: auto;
     order: -1;
     justify-content: flex-end;
-    border-bottom: 1px solid #ececec;
+    width: 100%;
+    padding: 0 50px;
+    border-bottom: 1px solid @gray;
+    background-color: @white;
   }
 
   .page-header__user-list li {
-    border-left: 1px solid #ececec;
     padding-left: 85px;
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-
-  .page-header__user-list a {
-    font-size: 17px;
-    line-height: 24px;
+    border-left: 1px solid @gray;
   }
 
   .search-icon a {
@@ -146,78 +153,74 @@
 
   .page-header__nav .page-header__nav-list {
     display: flex;
-    width: auto;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    width: 50%;
     margin-left: 50px;
   }
 
   .page-header__nav-list a {
+    width: 167px;
     font-size: 15px;
-    line-height: 24px;
-    padding-left: 35px;
+    text-align: left;
   }
 
   .page-header__nav .page-header__delivery {
     display: block;
+    text-align: right;
+    margin-right: 50px;
+    padding: 20px 0 15px;
     color: #878787;
     font-size: 15px;
-    line-height: 24px;
-    font-family: "Open Sans", "Arial", serif;
-    font-weight: normal;
-    padding: 20px 50px 15px;
   }
 }
 /*desktop-version*/
 @media (min-width: 1250px) {
-
   .page-header {
- /*padding-left: 50px;
- padding-right: 50px;*/
- background-color: #f9f9f9;
-
+    background-color: #f9f9f9;
   }
+
   .page-header .page-header__logo {
-    position: absolute;
     left: 50%;
     top: 10px;
     width: 160px;
   }
+  .page-header .page-header__nav {
+    width: 1250px;
+  }
+
 
   .page-header__nav .page-header__user-list {
-    box-sizing: border-box;
-    padding: 0;
-    padding-right: 50px;
-    margin: 0;
-    flex-wrap: nowrap;
-    width: 50%;
     order: 0;
+    flex-wrap: nowrap;
     justify-content: flex-end;
-    border-bottom: 1px solid #ececec;
+    width: 50%;
+    padding: 0 50px 0 0;
+    margin: 0;
+
   }
 
-  .page-header__user-list .basket-icon a{
+  .page-header__user-list .basket-icon a {
     padding-right: 50px;
   }
+
   .page-header__nav .page-header__nav-list {
-    box-sizing: border-box;
-    width: 50%;
-    background-color: #ffffff;
     display: flex;
     justify-content: flex-start;
-    padding: 0;
-    padding-left: 50px;
+    width: 50%;
+    padding: 0 0 0 50px;
     margin: 0;
-    border-bottom: 1px solid #ececec;
+    background-color: @white;
+    border-bottom: 1px solid @gray;
   }
+
   .page-header__nav-list a {
-    text-align: left;
     width: 220px;
     padding: 30px 5px 36px 55px;
+    text-align: left;
   }
 
   .page-header__nav .page-header__pop-list {
-    box-sizing: border-box;
     display: flex;
     justify-content: flex-start;
     width: 50%;
@@ -226,13 +229,13 @@
 
   .page-header__pop-list a {
     width: 220px;
+    padding: 18px 5px 18px 55px;
     font-size: 15px;
-    line-height: 24px;
     font-weight: bold;
     text-align: left;
-    padding: 18px 5px 18px 55px;
   }
+
   .page-header__nav .page-header__delivery {
-    padding-right: 100px;
+    margin-right: 100px;
   }
 }

@@ -1,7 +1,3 @@
-body {
-  box-sizing: border-box;
-}
-
 .features {
   padding: 0;
   background-color: #f9f9f9;
@@ -18,14 +14,14 @@ body {
 }
 
 .features .features__list {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  list-style: none;
+  width: 100%;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .features__list .features__item {
@@ -35,45 +31,44 @@ body {
 
 .features__list .features__item--home {
   position: relative;
-  background-color: #63d1bb;
+  background-color: @light-blue;
 }
 
 .features__list .features__item--toys {
   position: relative;
-  background-color: #56c3b2;
+  background-color: @dark-blue;
 }
 
 .features__list .features__item--home::after,
 .features__list .features__item--toys::after {
   position: absolute;
   content: "";
+  top: 20px;
+  right: 27px;
   width: 60px;
   height: 60px;
   background-image: url("../img/icon-toy.svg");
   background-repeat: no-repeat;
-  top: 20px;
-  right: 27px;
   opacity: 0.3;
 }
 
 .features__list .features__item--home::after {
+  right: 37px;
   width: 40px;
   height: 60px;
-  right: 37px;
   background-image: url("../img/icon-interior.svg");
 }
 
 .features__list .features__item--link {
   text-decoration: none;
-  color: #ffffff;
-  font-family: "Open Sans", "Arial", serif;
+  color: @white;
   font-weight: bold;
   font-size: 19px;
-  line-height: 24px;
 }
 /*tablet-version*/
 @media (min-width: 768px) {
   .features {
+    background-image: url("/img/hero-tablet@1x.jpg");
     background-size: cover;
   }
 
@@ -82,23 +77,21 @@ body {
   }
 
   .features .features__list {
-    box-sizing: border-box;
-    padding: 0 50px;
     position: relative;
+    padding: 0 50px;
   }
 
   .features .features__list::after {
     position: absolute;
-    width: 100%;
-    height: 20px;
     content: "";
     bottom: 0;
+    width: 100%;
+    height: 20px;
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat;
   }
 
   .features__list .features__item {
-    box-sizing: border-box;
     width: 50%;
   }
 
@@ -110,15 +103,17 @@ body {
 /*desktop-version*/
 @media (min-width: 1250px) {
   .features {
+    background-image: url("/img/hero-desktop@1x.jpg");
     background-position: center -80px;
   }
 
   .features .features__heading-text {
-    padding: 90px 30px 400px;
+    padding: 100px 30px 350px;
+    font-size: 53px;
+    line-height: 57px;
   }
 
   .features .features__list {
-    box-sizing: border-box;
     padding: 0 100px;
   }
 }

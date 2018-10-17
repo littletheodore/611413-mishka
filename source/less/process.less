@@ -1,0 +1,40 @@
+/*<section class="process">
+  <div class="process__heading-wrapper">
+    <h2 class="process__heading-text">Процесс производства</h2>
+  </div>
+  <video class="process__video" width="50" height="50" src="#"></video>
+  <button class="process__video--button"></button>
+  <span class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</span>
+  <a href="#" class="process__button--buy button">Сделать заказ</a>
+</section>*/
+.process {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 30px 60px;
+  width: 260px;
+  height:500px;
+  outline: 1px solid red;
+}
+/*tablet-version*/
+@media (min-width:768px) {
+  .process {
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 50px 110px;
+    width: 668px;
+    height:800px;
+    outline: 1px solid red;
+  }
+}
+/*desctop-version*/
+@media (min-width:1150px) {
+  .process {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px 110px;
+    width: 1150px;
+    height:452px;
+    outline: 1px solid red;
+  }
+}
