@@ -60,14 +60,18 @@
 .reviews__controls .reviews__skip {
   text-align: center;
   width: 129px;
+
   &:hover,
   &:focus {
     & svg {
-        fill: @light-black;}
+      fill: @light-black;
+    }
   }
+
   &:active {
     & svg {
-        fill: gray;}
+      fill: gray;
+    }
   }
 }
 
@@ -90,10 +94,12 @@
   background-repeat: repeat;
   background-size: contain;
 }
+
 /*tablet-version*/
+
 @media (min-width: 768px) {
   .reviews {
-      width: 768px;
+    width: 768px;
     padding: 0 50px;
     background-image: url("../img/review@1x.jpg");
     background-position: top 0 left -50px;
@@ -127,15 +133,15 @@
     padding: 10px auto;
     font-size: 15px;
     line-height: 30px;
+
     &:hover,
     &:focus {
-        color: @white;
-        background-color: @light-black;
-  
+      color: @white;
+      background-color: @light-black;
     }
+
     &:active {
-        color: @gray;
-  
+      color: @gray;
     }
   }
 
@@ -152,7 +158,9 @@
     height: 15px;
   }
 }
+
 /*desktop-version*/
+
 @media (min-width: 1250px) {
   .reviews {
     width: 1050px;

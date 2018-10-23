@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-        <header class="page-header">
-                <nav class="page-header__nav">
-                    <a class="page-header__logo" href="index.html">
-                        <picture>
-                            <source media="(min-width:1250px)" srcset="img/logo-desktop.svg">
-                            <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
-                            <img class="page-header__logo--image" src="img/logo-mobile.svg" alt="Логотип">
-                        </picture>
-                        <button class="page-header__menu--button">
-                            <span class="visually-hidden">Открыть меню/Закрыть меню</span>
-                        </button>
-                    </a>
-                    <ul class="page-header__nav-list">
-                        <li><a href="catalog.html">Каталог товаров</a></li>
-                        <li><a href="form.html" active>Вязание на заказ</a></li>
-                    </ul>
-                    <ul class="page-header__user-list">
-                        <li><a class="search-icon" href="search.html">Поиск по сайту</a></li>
-                        <li><a class="basket-icon" href="basket.html">Корзина: пока пуста</a></li>
-                    </ul>
-                    <ul class="page-header__pop-list">
-                        <li><a href="#">Новые поступления</a></li>
-                        <li><a href="#">Распродажа</a></li>
-                    </ul>
-                    <span class="page-header__delivery">Бесплатная доставка по России</span>
-                </nav>
-            </header>
-  <main class="form">
-    <h1 class="form__heading main-heading">Вязание на заказ</h1>
-    <span class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</span>
-    <form class="form__main blank" action="https://echo.htmlacademy.ru" method="post">
-      <fieldset class="blank__section blank__section--type">
-        <legend class="blank__section--title">Тип:</legend>
-        <div class="fieldset-wrapper">
-        <input type="checkbox" name="type-home" id="type-home" class="visually-hidden" checked><label for="type-home">Аксессуар для интерьера</label>
-        <input type="checkbox" name="type-toy" id="type-toy" class="visually-hidden" disabled><label for="type-toy">Детская игрушка</label>
-      </div></fieldset>
-      <fieldset class="blank__section blank__section--color">
-        <legend class="blank__section--title">Цвет:</legend>
-        <div class="fieldset-wrapper">
-        <input type="checkbox" name="color-white" id="color-white" class="visually-hidden" checked disabled><label for="color-white">Белый</label>
-        <input type="checkbox" name="color-grey" id="color-grey" class="visually-hidden" checked><label for="color-grey">Серый</label>
-        <input type="checkbox" name="color-tiffani" id="color-tiffani" class="visually-hidden"><label for="color-tiffani">"Тиффани"</label>
-        <input type="checkbox" name="color-black" id="color-black" class="visually-hidden"><label for="color-black">Черный</label>
-        <input type="checkbox" name="color-pink" id="color-pink" class="visually-hidden"><label for="color-pink">Розовый</label>
-        <input type="checkbox" name="color-orange" id="color-orange" class="visually-hidden"><label for="color-orange">Оранжевый</label>
-      </div></fieldset>
-      <fieldset class="blank__section blank__section--name">
-        <legend class="blank__section--title">фио</legend>
-        <div class="fieldset-wrapper">
-        <label for="first-name">Имя:</label><input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя &#8432;" required>
-        <label for="last-name">Фамилия:</label><input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию &#8432;" required>
-        <label for="father-name">Отчество:</label><input type="text" name="father-name" id="father-name" placeholder="Отчество, если желаете">
-      </div></fieldset>
-      <fieldset class="blank__section blank__section--phone">
-        <legend class="blank__section--title">тел</legend>
-        <div class="fieldset-wrapper">
-        <input type="tel" name="phone" id="phone" placeholder="+7 XXX XXX XX XX &#8432;" required>
-      </div></fieldset>
-      <fieldset class="blank__section blank__section--email">
+    <header class="page-header">
+        <nav class="page-header__nav">
+            <a class="page-header__logo" href="index.html">
+                <picture>
+                    <source media="(min-width:1250px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width:768px)" srcset="img/logo-tablet.svg">
+                    <img class="page-header__logo--image" src="img/logo-mobile.svg" alt="Логотип">
+                </picture>
+                <button class="page-header__menu--button">
+                    <span class="visually-hidden">Открыть меню/Закрыть меню</span>
+                </button>
+            </a>
+            <ul class="page-header__nav-list">
+                <li><a href="catalog.html">Каталог товаров</a></li>
+                <li><a href="form.html" active>Вязание на заказ</a></li>
+            </ul>
+            <ul class="page-header__user-list">
+                <li><a class="search-icon" href="search.html">Поиск по сайту</a></li>
+                <li><a class="basket-icon" href="basket.html">Корзина: пока пуста</a></li>
+            </ul>
+            <ul class="page-header__pop-list">
+                <li><a href="#">Новые поступления</a></li>
+                <li><a href="#">Распродажа</a></li>
+            </ul>
+            <span class="page-header__delivery">Бесплатная доставка по России</span>
+        </nav>
+    </header>
+    <main class="form">
+        <h1 class="form__heading main-heading">Вязание на заказ</h1>
+        <span class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа
+            и мы свяжемся с вами, чтобы уточнить детали.</span>
+        <form class="form__main blank" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="blank__section blank__section--type">
+                <legend class="blank__section--title">Тип:</legend>
+                <div class="fieldset-wrapper">
+                    <input type="checkbox" name="type-home" id="type-home" class="visually-hidden" checked><label for="type-home">Аксессуар
+                        для интерьера</label>
+                    <input type="checkbox" name="type-toy" id="type-toy" class="visually-hidden" disabled><label for="type-toy">Детская
+                        игрушка</label>
+                </div>
+            </fieldset>
+            <fieldset class="blank__section blank__section--color">
+                <legend class="blank__section--title">Цвет:</legend>
+                <div class="fieldset-wrapper">
+                    <input type="checkbox" name="color-white" id="color-white" class="visually-hidden" checked disabled><label
+                        for="color-white">Белый</label>
+                    <input type="checkbox" name="color-grey" id="color-grey" class="visually-hidden" checked><label for="color-grey">Серый</label>
+                    <input type="checkbox" name="color-tiffani" id="color-tiffani" class="visually-hidden"><label for="color-tiffani">"Тиффани"</label>
+                    <input type="checkbox" name="color-black" id="color-black" class="visually-hidden"><label for="color-black">Черный</label>
+                    <input type="checkbox" name="color-pink" id="color-pink" class="visually-hidden"><label for="color-pink">Розовый</label>
+                    <input type="checkbox" name="color-orange" id="color-orange" class="visually-hidden"><label for="color-orange">Оранжевый</label>
+                </div>
+            </fieldset>
+            <fieldset class="blank__section blank__section--name">
+                <legend class="blank__section--title">фио</legend>
+                <div class="fieldset-wrapper">
+                    <label for="first-name">Имя:</label><input type="text" name="first-name" id="first-name"
+                        placeholder="Введите ваше имя &#8432;" required>
+                    <label for="last-name">Фамилия:</label><input type="text" name="last-name" id="last-name"
+                        placeholder="Укажите фамилию &#8432;" required>
+                    <label for="father-name">Отчество:</label><input type="text" name="father-name" id="father-name"
+                        placeholder="Отчество, если желаете">
+                </div>
+            </fieldset>
+            <fieldset class="blank__section blank__section--phone">
+                <legend class="blank__section--title">тел</legend>
+                <div class="fieldset-wrapper">
+                    <input type="tel" name="phone" id="phone" placeholder="+7 XXX XXX XX XX &#8432;" required>
+                </div>
+            </fieldset>
+            <fieldset class="blank__section blank__section--email">
 
-        <legend class="blank__section--title">E-mail</legend>
-        <div class="fieldset-wrapper">
-        <input type="email" name="email" id="email" placeholder="Ваш Email &#8432;" required>
-      </div></fieldset>
-      <fieldset class="blank__section blank__section--add">
-
-        <legend class="blank__section--title">Доп</legend>
-        <div class="fieldset-wrapper">
-        <textarea name="add" id="add" rows="8" cols="28" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-      </div></fieldset>
-      <span class="blank__required">&#8432; Поля обязательны для заполнения</span>
-      <input type="submit" class="blank__order button" value="Отправить заказ">
-    </form>
-  </main>
-  <footer class="footer">
+                <legend class="blank__section--title">E-mail</legend>
+                <div class="fieldset-wrapper">
+                    <input type="email" name="email" id="email" placeholder="Ваш Email &#8432;" required>
+                </div>
+            </fieldset>
+            <fieldset class="blank__section blank__section--add">
+                <legend class="blank__section--title">Доп</legend>
+                <div class="fieldset-wrapper">
+                    <textarea name="add" id="add" rows="8" cols="28" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
+            </fieldset>
+            <span class="blank__required">&#8432; Поля обязательны для заполнения</span>
+            <input type="submit" class="blank__order button" value="Отправить заказ">
+        </form>
+    </main>
+    <footer class="footer">
         <a class="page-footer__logo" href="index.html"><span class="visually-hidden">Логотип</span>
             <svg class="page-footer__logo--image" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056"
@@ -130,7 +142,8 @@
                         </g>
                     </svg></a></li>
         </ul>
-        <a class="footer__copyright" href="https://up.htmlacademy.ru/adaptive/15">Разработано <span class="visually-hidden">Логотип HtmlAcademy</span>
+        <a class="footer__copyright" href="https://up.htmlacademy.ru/adaptive/15">Разработано <span class="visually-hidden">Логотип
+                HtmlAcademy</span>
             <svg class="footer__copyright--logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
                 enable-background="new 0 0 26.943 34.09" xml:space="preserve">
@@ -138,4 +151,4 @@
             </svg>
         </a>
     </footer>
-  <script src=js/form.js> </script> </body> </html>
+    <script src=js/form.js> </script> </body> </html>

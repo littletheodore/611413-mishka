@@ -41,28 +41,29 @@
     color: @light-black;
     text-decoration: underline;
     text-decoration-color: @light-blue;
+
     &:hover,
     &:focus {
-    color: @light-blue;
+      color: @light-blue;
     }
+
     &:active {
       color: #d2f0eb;
-      border-color: #d2f0eb;  
+      border-color: #d2f0eb;
     }
   }
 }
+
 .contacts .contacts__write {
-    
-    &:hover,
-    &:focus {
-        color: @white;
-        background-color: @light-black;
-  
-    }
-    &:active {
-        color: @gray;
-  
-    }
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @light-black;
+  }
+
+  &:active {
+    color: @gray;
+  }
 }
 
 .contacts .contacts__map {
@@ -75,10 +76,9 @@
   background-size: cover;
   background-position: center center;
 
- @media (min-resolution:144dpi),
-  (min-resolution:1.5dppx) {
-  background-image: url("../img/map-mobile@2x.jpg"); 
-  background-size: 320px auto;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 320px auto;
   }
 
   &::after {
@@ -91,7 +91,14 @@
     background-image: url("../img/icon-map-pin.svg");
   }
 }
+
+.contacts .contacts__map iframe {
+  width: 100%;
+  height: 100%;
+}
+
 /*tablet-version*/
+
 @media (min-width: 768px) {
   .contacts {
     position: relative;
@@ -145,11 +152,12 @@
     height: 457px;
     margin: 0 -50px 55px;
     background-image: url("../img/map-tablet@1x.jpg");
-    @media (min-resolution:144dpi),
-  (min-resolution:1.5dppx) {
-  background-image: url("../img/map-tablet@2x.jpg"); 
-  background-size: 768px auto;
-  }
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+
     &::after {
       left: 360px;
     }
@@ -160,7 +168,9 @@
     margin: 0 auto;
   }
 }
+
 /*desktop-version*/
+
 @media (min-width: 1250px) {
   .contacts {
     padding: 145px 100px 100px 275px;
@@ -209,12 +219,11 @@
     width: 525px;
     height: 457px;
     background-image: url("../img/map-desktop@1x.jpg");
-    @media (min-resolution:144dpi),
-  (min-resolution:1.5dppx) {
-  background-image: url("../img/map-desktop@2x.jpg"); 
-  background-size: 525px auto;
-  }
-    
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: 525px auto;
+    }
 
     &::after {
       left: 245px;

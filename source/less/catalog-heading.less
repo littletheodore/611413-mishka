@@ -1,4 +1,3 @@
-
 .catalog-heading {
   display: block;
   width: 320px;
@@ -9,10 +8,12 @@
 }
 
 /*tablet-version*/
+
 @media (min-width: 768px) {
-    .catalog-heading {
+  .catalog-heading {
     position: relative;
     width: 768px;
+
     &::after {
       position: absolute;
       content: "";
@@ -25,14 +26,13 @@
       background-size: contain;
     }
   }
-
 }
 
 /*desktop-version*/
+
 @media (min-width: 1150px) {
   .catalog-heading {
     width: 1150px;
     margin-bottom: 134px;
   }
-
 }

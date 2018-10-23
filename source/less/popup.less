@@ -1,146 +1,132 @@
-/*<section class="popup">
-        <div class>
-            <h2 class="popup__heading">Выберите размер</h2>
-            <span class="popup__description">Добавить в корзину</span>
-            <div class="popup__options">
-                <a class="popup__options--s" href="#">S</a>
-                <a class="popup__options--m" href="#">M</a>
-                <a class="popup__options--l" href="#">L</a>
-            </div>
-            <button class="popup__buy button">Добавить</button>
-</section>*/
-
 .popup {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    z-index: 50;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 50;
 }
 
 .popup-off {
-    display: none;
+  display: none;
 }
 
 .popup__block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 320px;
-    margin: 1100px auto 0;
-    padding: 35px 30px 45px;
-    background-color: @white;
-    border-top: 1px solid @gray;
-    border-bottom: 1px solid @gray;
-    box-shadow: 10px 5px 10px @gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  margin: 1100px auto 0;
+  padding: 35px 30px 45px;
+  background-color: @white;
+  border-top: 1px solid @gray;
+  border-bottom: 1px solid @gray;
+  box-shadow: 10px 5px 10px @gray;
 }
 
 .popup__block .popup__heading {
-    padding: 0 50px;
-    margin: 0;
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: @black;
+  padding: 0 50px;
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @black;
 }
 
 .popup__block .popup__description {
-    display: block;
-    padding: 10px 50px;
-    margin: 0;
-    text-align: center;
-    font-size: 15px;
-    line-height: 30px;
-    color: @light-black;
+  display: block;
+  padding: 10px 50px;
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  color: @light-black;
 }
 
 .popup__block .popup__options {
-    width: 260px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0;
-    margin-bottom: 30px;
-    align-items: center;
+  width: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 30px;
+  align-items: center;
 }
 
 .popup__options .popup__options--var {
-    display: block;
-    padding: 15px 30px;
-    line-height: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @light-black;
-    border: 1px solid @gray;
+  display: block;
+  padding: 15px 30px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: @light-black;
+  border: 1px solid @gray;
 
-    &:hover,
-    &:focus {
+  &:hover,
+  &:focus {
     border: 2px solid @gray;
-    }
+  }
 
-    &:active {
+  &:active {
     border: 2px solid @dark-blue;
-    }
-    &:first-of-type {
-      border: 2px solid @dark-blue; 
-    }
+  }
+
+  &:first-of-type {
+    border: 2px solid @dark-blue;
+  }
 }
 
 .popup__block .popup__buy {
-    margin: 0;
-    background-color: @dark-blue;
-    border: none;
-    color: @white;
+  margin: 0;
+  background-color: @dark-blue;
+  border: none;
+  color: @white;
 }
 
 /*tablet-version*/
+
 @media (min-width: 768px) {
+  .popup__block {
+    width: 568px;
+    margin-top: 1530px;
+    padding: 50px 100px 50px;
+    border: 1px solid @gray;
+    align-items: center;
+  }
 
-    .popup__block {
-        width: 568px;
-        margin-top: 1530px;
-        padding: 50px 100px 50px;
-        border: 1px solid @gray;
-        align-items: center;
-        /*display: none;*/
-    }
+  .popup__block .popup__heading {
+    padding: 0;
+    font-size: 30px;
+    line-height: 57px;
+  }
 
-    .popup__block .popup__heading {
-        padding: 0;
-        font-size: 30px;
-        line-height: 57px;
-    }
+  .popup__block .popup__description {
+    font-size: 17px;
+  }
 
-    .popup__block .popup__description {
-        font-size: 17px;
-    }
+  .popup__block .popup__options {
+    width: 350px;
+  }
 
-    .popup__block .popup__options {
-        width: 350px;
-    }
+  .popup__options .popup__options--var {
+    display: block;
+    padding: 15px 45px;
+    line-height: 20px;
+  }
 
-    .popup__options .popup__options--var {
-        display: block;
-        padding: 15px 45px;
-        line-height: 20px;
-
-
-    }
-
-    .popup__block .popup__buy {
-        width: 350px;
-    }
+  .popup__block .popup__buy {
+    width: 350px;
+  }
 }
 
 /*desktop-version*/
-@media (min-width: 1250px) {
 
-    .popup__block {
-        margin-top: 1110px;
-    }
+@media (min-width: 1250px) {
+  .popup__block {
+    margin-top: 1110px;
+  }
 }
