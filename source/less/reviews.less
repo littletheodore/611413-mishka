@@ -2,7 +2,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 320px;
   padding: 0 30px 45px;
+  margin: 0 auto;
 }
 
 .reviews .reviews__heading {
@@ -23,6 +25,9 @@
 }
 
 .reviews__post .reviews__post--main {
+  font-size: 15px;
+  line-height: 30px;
+  text-align: left;
   margin-bottom: 30px;
 }
 
@@ -55,6 +60,15 @@
 .reviews__controls .reviews__skip {
   text-align: center;
   width: 129px;
+  &:hover,
+  &:focus {
+    & svg {
+        fill: @light-black;}
+  }
+  &:active {
+    & svg {
+        fill: gray;}
+  }
 }
 
 .reviews__skip svg {
@@ -79,6 +93,7 @@
 /*tablet-version*/
 @media (min-width: 768px) {
   .reviews {
+      width: 768px;
     padding: 0 50px;
     background-image: url("../img/review@1x.jpg");
     background-position: top 0 left -50px;
@@ -112,6 +127,16 @@
     padding: 10px auto;
     font-size: 15px;
     line-height: 30px;
+    &:hover,
+    &:focus {
+        color: @white;
+        background-color: @light-black;
+  
+    }
+    &:active {
+        color: @gray;
+  
+    }
   }
 
   .reviews .reviews__controls {
@@ -130,7 +155,7 @@
 /*desktop-version*/
 @media (min-width: 1250px) {
   .reviews {
-    margin: 0 100px;
+    width: 1050px;
     padding: 0 0 0 175px;
     background-position: top 0 left 0;
   }

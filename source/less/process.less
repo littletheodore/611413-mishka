@@ -1,41 +1,162 @@
-/*<section class="process">
-  <div class="process__heading-wrapper">
-    <h2 class="process__heading-text">Процесс производства</h2>
-  </div>
-  <video class="process__video" width="50" height="50" src="#"></video>
-  <button class="process__video--button"></button>
-  <span class="process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</span>
-  <a href="#" class="process__button--buy button">Сделать заказ</a>
-</section>*/
-
 .process {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 30px 30px 60px;
-  width: 260px;
-  height: 500px;
-  outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px auto 60px;
+    width: 260px;
+    &:hover,
+  &:focus {
+  box-shadow: 10px 5px 10px @gray;    
+  }
+  &:active {
+  box-shadow: 5px 5px 10px @gray;    
+  }
+}
+
+.process .process__heading {
+    position: relative;
+    display: block;
+    padding: 25px 25px 25px 90px;
+    margin: 0;
+    font-weight: bold;
+    color: @black;
+}
+
+.process .process__heading--icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 25px;
+    top: 25px;
+    & path {
+        fill: @dark-blue;
+    }
+}
+
+.process .process__video {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.process .process__video--button {
+    position: absolute;
+    left: 70px;
+    top: 50px;
+    border: none;
+    background-color: transparent;
+    z-index: 10;
+    &:hover,
+    &:focus {
+        & svg 
+        {height: auto;
+        width: 120%;}
+    }
+  &:active {
+    & svg 
+    {height: auto;
+        width: 80%;}
+    }
+}
+
+.process .process__description {
+    padding: 30px 45px 30px 35px;
+    margin: 0;
+    text-align: left;
+    font-size: 13px;
+    color: @light-black;
+}
+.process .process__button--buy {
+    
+    &:hover,
+    &:focus {
+        color: @white;
+        background-color: @light-black;
+  
+    }
+    &:active {
+        color: @gray;
+  
+    }
 }
 /*tablet-version*/
+
 @media (min-width: 768px) {
-  .process {
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 50px 110px;
-    width: 668px;
-    height: 800px;
-    outline: 1px solid red;
-  }
+
+    .process {
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px auto 70px;
+        width: 668px;
+        border-bottom: 1px solid @gray;
+    }
+
+    .process .process__heading {
+        padding: 45px 25px 45px 105px;
+        font-size: 20px;
+        align-self: flex-start;
+    }
+    .process .process__heading--icon {
+        left: 40px;
+        top: 25px;
+    }
+
+    .process .process__video {
+        order: -1;
+        padding: 0;
+        margin: 0;
+    }
+
+    .process .process__video--movie {
+        width: 668px;
+        height: 456px;
+    }
+
+    .process .process__video--button {
+        left: 280px;
+        top: 190px;
+    }
+
+    .process .process__description {
+        padding: 0 40px 40px 40px;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .process .process__button--buy {
+        width: 583px;
+        margin: 0 auto 50px;
+        
+    }
 }
+
 /*desctop-version*/
+
 @media (min-width: 1150px) {
-  .process {
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 50px 110px;
-    width: 1150px;
-    height: 452px;
-    outline: 1px solid red;
-  }
+
+    .process {
+        position: relative;
+        justify-content: flex-start;
+        margin: 0 auto 110px;
+        width: 1050px;
+        padding: 15px 50px 60px 700px;
+    }
+
+    .process .process__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .process .process__video--movie {
+        width: 680px;
+        height: 430px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .process .process__button--buy {
+        width: 230px;
+        margin: 0 auto;
+    }
 }

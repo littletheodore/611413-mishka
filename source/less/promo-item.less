@@ -4,8 +4,9 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  width: 320px;
   padding: 37px 30px;
-  margin: 0;
+  margin: 0 auto;
   color: @light-black;
   text-align: left;
   font-weight: bold;
@@ -43,6 +44,7 @@
 }
 
 .promo-item .promo-item__table {
+  width: 260px;
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
@@ -78,6 +80,17 @@
   line-height: 20px;
   border: 2px solid @black;
   color: @light-black;
+  &:hover,
+  &:focus {
+      color: @white;
+      background-color: @light-black;
+
+  }
+  &:active {
+      color: @gray;
+
+  }
+  
 }
 
 .promo-item::after {
@@ -97,8 +110,9 @@
     position: relative;
     justify-content: stretch;
     align-items: flex-start;
+    width: 768px;
     padding: 40px 50px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .promo-item .promo-item__heading {
@@ -171,29 +185,36 @@
 @media (min-width: 1250px) {
   .promo-item {
     position: relative;
-    padding: 135px 0 70px 175px;
-    margin: 0 100px;
+    width: 1250px;
+    padding: 135px 0 70px 270px;
+    margin: 0 auto;
   }
 
   .promo-item .promo-item__heading {
     margin-bottom: 65px;
     font-size: 53px;
     line-height: 57px;
+    font-weight: bold;
   }
 
   .promo-item .promo__ad {
     position: absolute;
-    left: -20px;
+    left: 125px;
     top: 145px;
     width: 120px;
     line-height: 17px;
     text-align: center;
   }
+  .promo-item .promo-item__desc {
+    width: 350px;
+    margin-bottom: 50px;
+    padding-right: 70px;
+  }
 
   .promo-item .promo-item__img {
     z-index: -1;
     bottom: 70px;
-    right: 0;
+    right: 100px;
     width: 525px;
     height: 640px;
   }
