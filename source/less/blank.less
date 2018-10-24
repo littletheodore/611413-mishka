@@ -1,296 +1,296 @@
 .blank .blank__section {
-  margin: 0 auto 30px;
-  padding: 0;
-  border: none;
-  border-top: 1px solid @light-blue;
+    margin: 0 auto 30px;
+    padding: 0;
+    border: none;
+    border-top: 1px solid @light-blue;
 }
 
 .blank__section .fieldset-wrapper {
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: left;
-  flex-wrap: wrap;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    flex-wrap: wrap;
 }
 
 .blank__section legend {
-  margin-bottom: 20px;
-  padding-right: 30px;
-  text-transform: uppercase;
-  text-align: left;
-  line-height: 18px;
-  font-weight: bold;
-  color: @light-blue;
+    margin-bottom: 20px;
+    padding-right: 30px;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 18px;
+    font-weight: bold;
+    color: @light-blue;
 }
 
 .blank__section label {
-  line-height: 16px;
-  font-weight: bold;
-  padding: 20px 0;
-  text-align: left;
+    line-height: 16px;
+    font-weight: bold;
+    padding: 20px 0;
+    text-align: left;
 }
 
 .blank__section--color label,
 .blank__section--type label {
-  position: relative;
-  padding: 20px 30px 20px 65px;
+    position: relative;
+    padding: 20px 30px 20px 65px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    border: 2px solid @light-black;
-  }
-
-  &:hover,
-  &:focus {
     &::before {
-      border-color: @light-blue;
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border: 2px solid @light-black;
     }
-  }
 
-  &:active {
-    &::before {
-      border-color: @gray;
+    &:hover,
+    &:focus {
+        &::before {
+            border-color: @light-blue;
+        }
     }
-  }
+
+    &:active {
+        &::before {
+            border-color: @gray;
+        }
+    }
 }
 
 .blank__section--type label::before {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 .blank__section--color input:checked {
-  & + label::before {
-    background-image: url("../img/icon-tick.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
+    &+label::before {
+        background-image: url("../img/icon-tick.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 }
 
 .blank__section--type input:checked {
-  & + label::after {
-    position: absolute;
-    content: "";
-    top: 15px;
-    left: 10px;
-    width: 1px;
-    height: 1px;
-    border: 10px solid @dark-blue;
-    border-radius: 50%;
-  }
+    &+label::after {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 10px;
+        width: 1px;
+        height: 1px;
+        border: 10px solid @dark-blue;
+        border-radius: 50%;
+    }
 }
 
 .blank__section--color input:disabled,
 .blank__section--type input:disabled {
-  & + label::before {
-    border-color: @gray;
-  }
+    &+label::before {
+        border-color: @gray;
+    }
 }
 
 .blank__section input {
-  border: none;
-  border-bottom: 2px solid @black;
-  line-height: 18px;
-  width: 260px;
-  padding: 5px 0 15px;
-  margin: 0;
-  text-align: left;
-  color: @light-black;
-
-  &:hover,
-  &:focus {
-    border-color: @light-blue;
-  }
-
-  &:active {
+    border: none;
+    border-bottom: 2px solid @black;
+    line-height: 18px;
+    width: 260px;
+    padding: 5px 0 15px;
+    margin: 0;
+    text-align: left;
     color: @light-black;
-    border-color: @light-blue;
-  }
+
+    &:hover,
+    &:focus {
+        border-color: @light-blue;
+    }
+
+    &:active {
+        color: @light-black;
+        border-color: @light-blue;
+    }
 }
 
 .blank .blank__section--add textarea {
-  width: 260px;
-  padding: 15px 60px 15px 15px;
-  border: 1px solid @light-black;
+    width: 260px;
+    padding: 15px 60px 15px 15px;
+    border: 1px solid @light-black;
 
-  &:hover,
-  &:focus {
-    border-color: @light-blue;
-  }
+    &:hover,
+    &:focus {
+        border-color: @light-blue;
+    }
 
-  &:active {
-    color: @light-black;
-    border-color: @light-blue;
-  }
+    &:active {
+        color: @light-black;
+        border-color: @light-blue;
+    }
 }
 
 .blank .blank__required {
-  margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: left;
-  color: @light-black;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+    color: @light-black;
 }
 
 .blank .blank__order {
-  background-color: @white;
+    background-color: @white;
 }
 
 /*tablet-version*/
 
 @media (min-width: 768px) {
-  .blank .blank__section {
-    position: relative;
-    margin: 0 auto;
-    padding: 50px 50px 50px 217px;
-    border: none;
-  }
-
-  .blank__section .fieldset-wrapper {
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 500px;
-  }
-
-  .blank__section legend {
-    position: absolute;
-    top: 65px;
-    left: 50px;
-    line-height: 16px;
-  }
-
-  .blank__section label {
-    font-size: 19px;
-    line-height: 18px;
-    margin-right: 0;
-  }
-
-  .blank__section--color label {
-    width: 220px;
-    margin: 0;
-  }
-
-  .blank__section input {
-    font-size: 19px;
-  }
-
-  .blank .blank__section--color,
-  .blank .blank__section--email,
-  .blank .blank__section--phone {
-    background-color: #f1f1f1;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      right: 75px;
-      top: 40px;
-      width: 40px;
-      height: 40px;
-      background-position: right center;
-      background-repeat: no-repeat;
-      opacity: 0.3;
+    .blank .blank__section {
+        position: relative;
+        margin: 0 auto;
+        padding: 50px 50px 50px 217px;
+        border: none;
     }
-  }
 
-  .blank .blank__section--email::after {
-    background-image: url("../img/icon-mail.svg");
-  }
+    .blank__section .fieldset-wrapper {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 500px;
+    }
 
-  .blank .blank__section--phone::after {
-    background-image: url("../img/icon-phone.svg");
-  }
+    .blank__section legend {
+        position: absolute;
+        top: 65px;
+        left: 50px;
+        line-height: 16px;
+    }
 
-  .blank .blank__section--name input {
-    width: 375px;
-    padding-left: 15px;
-    margin-left: 25px;
-    flex-grow: 1;
-  }
+    .blank__section label {
+        font-size: 19px;
+        line-height: 18px;
+        margin-right: 0;
+    }
 
-  .blank .blank__section--email input,
-  .blank .blank__section--phone input {
-    width: 100%;
-    margin: 0;
-    padding-left: 15px;
-    background-color: #f1f1f1;
-  }
+    .blank__section--color label {
+        width: 220px;
+        margin: 0;
+    }
 
-  .blank .blank__section--add textarea {
-    width: 100%;
-    padding: 15px;
-  }
+    .blank__section input {
+        font-size: 19px;
+    }
 
-  .blank .blank__required {
-    order: 10;
-    margin: 0 50px 0 0;
-    line-height: 30px;
-  }
+    .blank .blank__section--color,
+    .blank .blank__section--email,
+    .blank .blank__section--phone {
+        background-color: #f1f1f1;
+        position: relative;
 
-  .blank .blank__order {
-    margin: 0 0 0 50px;
-  }
+        &::after {
+            position: absolute;
+            content: "";
+            right: 75px;
+            top: 40px;
+            width: 40px;
+            height: 40px;
+            background-position: right center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+        }
+    }
+
+    .blank .blank__section--email::after {
+        background-image: url("../img/icon-mail.svg");
+    }
+
+    .blank .blank__section--phone::after {
+        background-image: url("../img/icon-phone.svg");
+    }
+
+    .blank .blank__section--name input {
+        width: 375px;
+        padding-left: 15px;
+        margin-left: 25px;
+        flex-grow: 1;
+    }
+
+    .blank .blank__section--email input,
+    .blank .blank__section--phone input {
+        width: 100%;
+        margin: 0;
+        padding-left: 15px;
+        background-color: #f1f1f1;
+    }
+
+    .blank .blank__section--add textarea {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .blank .blank__required {
+        order: 10;
+        margin: 0 50px 0 0;
+        line-height: 30px;
+    }
+
+    .blank .blank__order {
+        margin: 0 0 0 50px;
+    }
 }
 
 /*desktop-version*/
 
 @media (min-width: 1150px) {
-  .blank .blank__section {
-    padding: 50px 225px;
-  }
-
-  .blank__section .fieldset-wrapper {
-    width: 700px;
-  }
-
-  .blank__section--color .fieldset-wrapper {
-    width: 750px;
-  }
-
-  .blank__section legend {
-    top: 65px;
-    left: 50px;
-  }
-
-  .blank .blank__section label {
-    padding: 20px 80px 20px;
-    margin-right: 0;
-  }
-
-  .blank .blank__section--color {
-    padding-right: 175px;
-  }
-
-  .blank .blank__section--color label {
-    width: 250px;
-  }
-
-  .blank .blank__section--name label {
-    padding: 20px 0;
-  }
-
-  .blank .blank__section--name input {
-    width: 575px;
-  }
-
-  .blank .blank__section--email,
-  .blank .blank__section--phone {
-    &::after {
-      right: 230px;
-      top: 40px;
+    .blank .blank__section {
+        padding: 50px 225px;
     }
-  }
 
-  .blank .blank__required {
-    margin-right: 225px;
-  }
+    .blank__section .fieldset-wrapper {
+        width: 700px;
+    }
 
-  .blank .blank__order {
-    margin-left: 225px;
-  }
+    .blank__section--color .fieldset-wrapper {
+        width: 750px;
+    }
+
+    .blank__section legend {
+        top: 65px;
+        left: 50px;
+    }
+
+    .blank .blank__section label {
+        padding: 20px 80px 20px;
+        margin-right: 0;
+    }
+
+    .blank .blank__section--color {
+        padding-right: 175px;
+    }
+
+    .blank .blank__section--color label {
+        width: 250px;
+    }
+
+    .blank .blank__section--name label {
+        padding: 20px 0;
+    }
+
+    .blank .blank__section--name input {
+        width: 575px;
+    }
+
+    .blank .blank__section--email,
+    .blank .blank__section--phone {
+        &::after {
+            right: 230px;
+            top: 40px;
+        }
+    }
+
+    .blank .blank__required {
+        margin-right: 225px;
+    }
+
+    .blank .blank__order {
+        margin-left: 225px;
+    }
 }
