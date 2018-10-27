@@ -7,18 +7,18 @@ var popup = document.querySelector(".popup");
 
 
 button.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    user_list.classList.toggle("page-header_list--on");
-    nav_list.classList.toggle("page-header_list--on");
-    button.classList.toggle("button-off");
+  evt.preventDefault();
+  user_list.classList.toggle("page-header_list--on");
+  nav_list.classList.toggle("page-header_list--on");
+  button.classList.toggle("button-off");
 });
 
 button_pop.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.toggle("popup-off");
+  evt.preventDefault();
+  popup.classList.toggle("popup-off");
 });
 
 popup.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.toggle("popup-off");
+  evt.preventDefault();
+  popup.classList.toggle("popup-off");
 });
