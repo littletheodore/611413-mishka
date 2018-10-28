@@ -1,5 +1,5 @@
 .footer {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding: 0 30px;
@@ -26,18 +26,14 @@
   padding: 23px 20px;
 }
 
-.footer__social a {
-  &:hover,
-  &:focus {
-    & path {
-      fill: #46c1ae;
-    }
+.footer__social .footer-icons {
+  &:hover path,
+  &:focus path {
+    fill: #46c1ae;
   }
 
-  &:active {
-    & path {
-      fill: #e5f6f4;
-    }
+  &:active path {
+    fill: #e5f6f4;
   }
 }
 
