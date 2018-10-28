@@ -4,30 +4,32 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 37px 30px;
-  margin: 0;
+  width: 320px;
+  padding: 28px 30px 42px;
+  margin: 0 auto;
   color: @light-black;
   text-align: left;
-  font-weight: bold;
 }
 
 .promo-item .promo-item__heading {
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   font-size: 25px;
   line-height: 30px;
+  font-weight: bold;
 }
 
 .promo-item .promo__ad {
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   line-height: 20px;
   color: @light-blue;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .promo-item .promo__ad br {
@@ -38,11 +40,12 @@
   display: block;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 15px;
 }
 
 .promo-item .promo-item__table {
+  width: 260px;
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
@@ -50,9 +53,9 @@
 }
 
 .promo-item .promo-item__table td {
+  padding: 6px 20px 8px 0;
   font-size: 15px;
   border-bottom: 1px solid @gray;
-  padding: 10px 10px 10px 0;
 }
 
 .promo-item .promo-item__img {
@@ -63,21 +66,32 @@
 
 .promo-item .promo-item__price {
   display: block;
-  margin: 30px auto;
+  margin: 17px auto 25px;
   text-align: center;
+  font-weight: bold;
 }
 
 .promo-item .promo-item__buy {
   display: block;
   width: 260px;
   margin: 0 auto;
-  padding: 17px 0;
+  padding: 14px 0;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   line-height: 20px;
   border: 2px solid @black;
   color: @light-black;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @light-black;
+  }
+
+  &:active {
+    color: @gray;
+  }
 }
 
 .promo-item::after {
@@ -91,26 +105,29 @@
   background-repeat: repeat;
   background-size: contain;
 }
+
 /*tablet-version*/
+
 @media (min-width: 768px) {
   .promo-item {
     position: relative;
     justify-content: stretch;
     align-items: flex-start;
-    padding: 40px 50px;
-    margin: 0;
+    width: 768px;
+    padding: 37px 50px 70px;
+    margin: 0 auto;
   }
 
   .promo-item .promo-item__heading {
     display: block;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 43px;
     line-height: 50px;
   }
 
   .promo-item .promo__ad {
     position: absolute;
-    top: 45px;
+    top: 50px;
     right: 75px;
     line-height: 17px;
     text-align: center;
@@ -122,27 +139,29 @@
 
   .promo-item .promo-item__desc {
     width: 290px;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
     margin-right: 45px;
+    font-size: 17px;
     line-height: 30px;
   }
 
   .promo-item .promo-item__table {
     width: 290px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     margin-right: 45px;
   }
 
   .promo-item .promo-item__table td {
+    padding: 10px 0;
     line-height: 20px;
   }
 
   .promo-item .promo-item__img {
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     right: 50px;
     width: 334px;
-    height: 406px;
+    height: 405px;
     z-index: -1;
   }
 
@@ -155,7 +174,6 @@
   .promo-item .promo-item__buy {
     width: 290px;
     margin: 15px 45px 0 0;
-    padding: 17px 0;
     text-align: center;
     border: 2px solid @black;
     text-transform: uppercase;
@@ -164,41 +182,67 @@
   }
 
   .promo-item::after {
-    height: 15px;
+    height: 18px;
+    background-position: 20px 0;
+    background-size: 770px 18px;
   }
 }
+
 /*desktop-version*/
+
 @media (min-width: 1250px) {
   .promo-item {
     position: relative;
-    padding: 135px 0 70px 175px;
-    margin: 0 100px;
+    width: 1050px;
+    padding: 115px 0 90px 175px;
+    margin: 0 auto;
   }
 
   .promo-item .promo-item__heading {
-    margin-bottom: 65px;
+    margin-bottom: 48px;
     font-size: 53px;
     line-height: 57px;
+    font-weight: bold;
   }
 
   .promo-item .promo__ad {
     position: absolute;
-    left: -20px;
-    top: 145px;
+    left: 25px;
+    top: 120px;
     width: 120px;
     line-height: 17px;
     text-align: center;
   }
 
+  .promo-item .promo-item__desc {
+    width: 350px;
+    margin-bottom: 50px;
+    padding-right: 50px;
+    letter-spacing: 0.1px;
+  }
+
+  .promo-item .promo-item__table {
+    margin-bottom: 88px;
+  }
+
+  .promo-item .promo-item__table td {
+    padding: 9px 0 10px;
+  }
+
   .promo-item .promo-item__img {
     z-index: -1;
-    bottom: 70px;
+    bottom: 90px;
     right: 0;
     width: 525px;
     height: 640px;
   }
 
+  .promo-item .promo-item__buy {
+    width: 295px;
+  }
+
   .promo-item::after {
     height: 20px;
+    background-size: 100% 20px;
   }
 }

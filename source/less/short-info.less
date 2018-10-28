@@ -2,60 +2,62 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 30px 30px 50px;
+  width: 320px;
+  margin: 30px auto 55px;
+  padding: 0 28px;
 }
 
 .short-info .short-info__heading {
   width: auto;
-  padding: 0;
   margin: 0;
   text-align: left;
+  letter-spacing: -1.5px;
 }
 
 .short-info .short-info__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0;
   margin: 0 auto;
   color: @black;
   list-style: none;
-  line-height: 20px;
   text-align: left;
-  font-weight: bold;
 }
 
 .short-info .short-info__item {
   position: relative;
   width: 260px;
   padding-top: 80px;
+  font-weight: bold;
+  line-height: 20px;
 }
 
 .short-info .short-info__item svg {
   position: absolute;
-  content: "";
   left: 0;
-  bottom: 50px;
-
-  & path {
-    fill: @light-blue;
-  }
+  top: 25px;
 }
+
 /*tablet-version*/
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .short-info {
-    margin: 50px 50px 80px;
+    width: 768px;
+    margin: 48px auto 80px;
+    padding: 0 50px;
   }
 
   .short-info .short-info__heading {
+    margin-bottom: -10px;
     font-size: 43px;
     line-height: 50px;
+    letter-spacing: -0.5px;
   }
 
   .short-info .short-info__list {
-    width: 668px;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 668px;
     margin: 0;
     font-size: 20px;
     line-height: 22px;
@@ -63,19 +65,21 @@
   }
 
   .short-info .short-info__item {
-    width: 335px;
-    padding-top: 120px;
+    width: 334px;
+    padding-top: 110px;
+    font-size: 20px;
+    line-height: 22px;
 
     &:nth-child(1) {
       order: 1;
     }
 
     &:nth-child(2) {
-      order: 5;
+      order: 3;
     }
 
     &:nth-child(3) {
-      order: 3;
+      order: 5;
     }
 
     &:nth-child(4) {
@@ -90,18 +94,30 @@
       order: 6;
     }
   }
+
+  .short-info .short-info__item svg {
+    left: 5px;
+    top: 60px;
+
+    & path {
+      fill: red;
+    }
+  }
 }
+
 /*desktop-version*/
 @media (min-width: 1250px) {
   .short-info {
-    margin: 50px 50px 80px;
-    padding-left: 225px;
+    width: 1250px;
+    padding-left: 275px;
     padding-right: 175px;
+    margin-bottom: 87px;
+    margin-top: 65px;
   }
 
   .short-info .short-info__heading {
-    font-size: 43px;
-    line-height: 50px;
+    font-size: 53px;
+    line-height: 57px;
   }
 
   .short-info .short-info__list {
@@ -110,6 +126,7 @@
 
   .short-info .short-info__item {
     width: 350px;
-    padding-top: 120px;
+    padding-top: 110px;
+    letter-spacing: 0.2px;
   }
 }

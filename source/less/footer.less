@@ -1,21 +1,10 @@
-/*<footer class="footer">
-<a class="page-footer__logo" href="#">
-  <svg class="page-footer__logo--image"
-  </svg>
-</a>
-  <ul class="footer__social">
-  <li><a class="footer__social--insta" href="#"></a></li>
-  <li><a class="footer__social--fb" href="#"></a></li>
-  <li><a class="footer__social--tw" href="#"></a></li>
-  </ul>
-  <span class="footer__copyright">Разработано<a class="footer__copyright--logo" href="#"></a></span>
-</footer>*/
-
 .footer {
+  width: auto;
   display: flex;
   flex-direction: column;
   padding: 0 30px;
   background-color: @light-gray;
+  align-items: center;
 }
 
 .footer .page-footer__logo {
@@ -25,7 +14,8 @@
 .footer .footer__social {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #e5e5e5;
@@ -33,62 +23,99 @@
 }
 
 .footer__social li {
-  width: 55px;
-  height: 80px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  color: @black;
+  padding: 23px 20px;
+}
+
+.footer__social .footer-icons {
+  &:hover path,
+  &:focus path {
+    fill: #46c1ae;
+  }
+
+  &:active path {
+    fill: #e5f6f4;
+  }
 }
 
 .footer__social .footer__social--insta {
-  background-image: url("../img/icon-insta.svg");
   margin-left: auto;
 }
 
-.footer__social .footer__social--fb {
-  background-image: url("../img/icon-fb.svg");
-}
-
 .footer__social .footer__social--tw {
-  background-image: url("../img/icon-twitter.svg");
   margin-right: auto;
 }
 
 .footer .footer__copyright {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: block;
+  position: relative;
+  text-decoration: none;
   font-size: 19px;
   line-height: 18px;
   font-weight: bold;
   margin: 0 auto;
-  padding: 25px 0;
+  padding: 28px 60px 34px 0;
+  color: @light-black;
+
+  &:active {
+    color: @gray;
+  }
 }
 
 .footer__copyright--logo {
+  position: absolute;
   width: 30px;
-  height: 30px;
-  margin-left: 30px;
+  height: 35px;
+  right: 0;
+  top: 20px;
 
   & path {
     fill: @dark-blue;
   }
+
+  &:hover,
+  &:focus {
+    & path {
+      fill: #46c1ae;
+    }
+  }
+
+  &:active {
+    & path {
+      fill: #e5f6f4;
+    }
+  }
 }
+
 /*tablet-version*/
+
 @media (min-width: 768px) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 45px 0 52px;
+    margin: 0 auto;
   }
 
   .footer .page-footer__logo {
     display: block;
-    width: 183px;
+    width: 185px;
     height: 34px;
-    margin-top: 55px;
-    margin-bottom: 55px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    &:hover,
+    &:focus {
+      & svg {
+        fill: #46c1ae;
+      }
+    }
+
+    &:active {
+      & svg {
+        fill: #e5f6f4;
+      }
+    }
   }
 
   .footer .footer__social {
@@ -97,13 +124,36 @@
   }
 
   .footer .footer__copyright {
-    width: 183px;
+    width: 185px;
+    padding: 35px 60px 35px 0;
     margin: 0;
+
+    & svg {
+      top: 30px;
+    }
   }
 }
+
 /*desktop-version*/
-@media (min-width: 1250px) {
+
+@media (min-width: 1150px) {
   .footer {
-    padding: 0 100px;
+    width: 1150px;
+    padding: 0 48px 0 52px;
+    margin: 0 auto;
+  }
+
+  .footer .page-footer__logo {
+    margin-top: 52px;
+    margin-bottom: 58px;
+  }
+
+  .footer .footer__copyright {
+    padding: 40px 60px 40px 0;
+    margin: 0;
+
+    & svg {
+      top: 35px;
+    }
   }
 }
