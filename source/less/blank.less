@@ -1,4 +1,5 @@
 .blank .blank__section {
+  width: 260px;
   margin: 0 auto;
   padding: 0;
   border: none;
@@ -6,10 +7,9 @@
 }
 
 .blank__section .fieldset-wrapper {
-  width: 260px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: left;
   flex-wrap: wrap;
 }
@@ -27,17 +27,16 @@
   line-height: 18px;
   font-weight: bold;
   text-align: left;
-  letter-spacing: 0.5px;
 }
 
-.blank__section--type .fieldset-wrapper {
-  padding-bottom: 43px;
+.blank .blank__section--type {
   padding-top: 10px;
+  padding-bottom: 43px;
 }
 
 .blank__section--type label {
   position: relative;
-  padding: 25px 30px 0 80px;
+  padding: 25px 30px 0 62px;
 
   &::before {
     position: absolute;
@@ -64,14 +63,14 @@
   }
 }
 
-.blank__section--color .fieldset-wrapper {
-  margin-top: 24px;
-  margin-bottom: 10px;
+.blank .blank__section--color {
+  padding-top: 24px;
+  padding-bottom: 11px;
 }
 
 .blank__section--color label {
   position: relative;
-  padding: 13px 30px 7px 65px;
+  padding: 13px 30px 7px 63px;
   margin-bottom: 23px;
 
   &::before {
@@ -83,10 +82,20 @@
     height: 40px;
     border: 2px solid @light-black;
   }
+}
+
+.blank__section--color input {
+  &:checked {
+    & + label::before {
+      background-image: url("../img/icon-tick.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
 
   &:hover,
   &:focus {
-    &::before {
+    & + label::before {
       border-color: @light-blue;
     }
   }
@@ -98,36 +107,37 @@
   }
 }
 
-.blank__section--color input:checked {
-  & + label::before {
-    background-image: url("../img/icon-tick.svg");
-    background-position: center center;
-    background-repeat: no-repeat;
+.blank__section--type input {
+  &:checked {
+    & + label::after {
+      position: absolute;
+      content: "";
+      top: 27px;
+      left: 12px;
+      width: 1px;
+      height: 1px;
+      border: 8px solid @dark-blue;
+      border-radius: 50%;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    & + label::before {
+      border-color: @light-blue;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: @gray;
+    }
   }
 }
 
-.blank__section--type input:checked {
-  & + label::after {
-    position: absolute;
-    content: "";
-    top: 27px;
-    left: 12px;
-    width: 1px;
-    height: 1px;
-    border: 8px solid @dark-blue;
-    border-radius: 50%;
-  }
-}
-
-.blank__section--color input:disabled,
-.blank__section--type input:disabled {
-  & + label::before {
-    border-color: @gray;
-  }
-}
-
-.blank__section--name .fieldset-wrapper {
-  padding: 6px 0 31px;
+.blank .blank__section--name {
+  padding-top: 6px;
+  padding-bottom: 32px;
 }
 
 .blank__section--name label {
@@ -147,28 +157,55 @@
   &:hover,
   &:focus {
     border-color: @light-blue;
+
+    & + .form-icons {
+      fill: @light-blue;
+    }
   }
 
   &:active {
     color: @light-black;
     border-color: @light-blue;
+
+    & + .form-icons {
+      fill: @light-blue;
+    }
   }
 }
 
-.blank__section--email .fieldset-wrapper,
-.blank__section--phone .fieldset-wrapper {
-  padding: 20px 0 32px;
+.blank .blank__section--phone {
+  position: relative;
+  padding: 11px 0 32px;
 }
 
-.blank .blank__section--add .fieldset-wrapper {
+.blank .blank__section--phone input {
+  font-size: 19px;
+}
+
+.blank .blank__section--email {
+  position: relative;
+  padding: 19px 0 32px;
+}
+
+.blank__section .form-icons {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  bottom: 40px;
+  right: 5px;
+  fill: #cccccc;
+}
+
+.blank .blank__section--add {
   padding: 25px 0 17px;
 }
 
-.blank .blank__section--add textarea {
+.blank__section--add textarea {
   width: 260px;
-  height: 140px;
+  height: 142px;
+  line-height: 18px;
   padding: 15px 60px 10px 15px;
-  border: 1px solid @light-black;
+  border: 2px solid @light-black;
 
   &:hover,
   &:focus {
@@ -183,14 +220,15 @@
 
 .blank .blank__required {
   margin-bottom: 30px;
+  padding-left: 2px;
   font-size: 14px;
   line-height: 16px;
   text-align: left;
   color: @light-black;
-  letter-spacing: 0.5px;
 }
 
 .blank .blank__order {
+  padding-top: 14px;
   background-color: @white;
   letter-spacing: -0.5px;
 }
@@ -214,7 +252,7 @@
 
   .blank__section legend {
     position: absolute;
-    top: 65px;
+    top: 68px;
     left: 50px;
     line-height: 16px;
   }
@@ -225,8 +263,8 @@
     margin-right: 0;
   }
 
-  .blank__section--type .fieldset-wrapper {
-    padding: 0;
+  .blank .blank__section--type {
+    padding-top: 54px;
   }
 
   .blank__section--type label {
@@ -249,10 +287,11 @@
     }
   }
 
+  .blank .blank__section--color {
+    padding-bottom: 26px;
+  }
+
   .blank__section--color .fieldset-wrapper {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 4px;
     justify-content: space-between;
   }
 
@@ -260,7 +299,7 @@
     position: relative;
     width: 237px;
     padding: 17px 30px 18px 80px;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
 
     &::before {
       width: 52px;
@@ -272,59 +311,52 @@
     font-size: 19px;
   }
 
+  .blank .blank__section--name {
+    padding-top: 48px;
+    padding-bottom: 30px;
+  }
+
+  .blank__section--name label {
+    padding-top: 18px;
+  }
+
+  .blank .blank__section--name input {
+    width: 374px;
+    padding: 13px 10px 15px 18px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
   .blank .blank__section--color,
   .blank .blank__section--email,
   .blank .blank__section--phone {
     background-color: #f1f1f1;
     position: relative;
+  }
 
-    &::after {
-      position: absolute;
-      content: "";
-      right: 75px;
-      top: 40px;
-      width: 40px;
-      height: 40px;
-      background-position: right center;
-      background-repeat: no-repeat;
-      opacity: 0.3;
+  .blank .blank__section--phone {
+    padding-top: 45px;
+    padding-bottom: 10px;
+
+    & .form-icons {
+      bottom: 20px;
+      right: 70px;
     }
   }
 
-  .blank .blank__section--email::after {
-    background-image: url("../img/icon-mail.svg");
-  }
-
-  .blank .blank__section--phone::after {
-    background-image: url("../img/icon-phone.svg");
-  }
-
-  .blank .blank__section--name .fieldset-wrapper {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 4px;
-  }
-
-  .blank .blank__section--name label {
-    padding-top: 14px;
-  }
-
-  .blank .blank__section--name input {
-    width: 375px;
-    padding: 14px 10px 14px 17px;
-    margin-left: 25px;
-    margin-bottom: 24px;
-    flex-grow: 1;
-  }
-
-  .blank__section--email .fieldset-wrapper,
-  .blank__section--phone .fieldset-wrapper {
-    padding: 0;
-  }
-
   .blank .blank__section--email {
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 50px;
+
+    & .form-icons {
+      bottom: 60px;
+      right: 70px;
+    }
+  }
+
+  .blank__section--email legend {
+    top: 30px;
   }
 
   .blank .blank__section--email input,
@@ -335,20 +367,20 @@
     background-color: #f1f1f1;
   }
 
-  .blank .blank__section--add .fieldset-wrapper {
-    padding: 0;
-    margin-bottom: 35px;
+  .blank .blank__section--add {
+    margin-bottom: 33px;
   }
 
-  .blank .blank__section--add textarea {
+  .blank__section--add textarea {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
     font-size: 19px;
     line-height: 18px;
   }
 
   .blank .blank__required {
     order: 10;
+    padding-bottom: 2px;
     margin: 0 50px 0 0;
     font-size: 17px;
     line-height: 30px;
@@ -357,6 +389,10 @@
   .blank .blank__order {
     width: 230px;
     margin: 0 0 0 50px;
+    padding: 16px 0;
+    letter-spacing: 0;
+    font-size: 17px;
+    line-height: 16px;
   }
 }
 
@@ -364,7 +400,7 @@
 
 @media (min-width: 1150px) {
   .blank .blank__section {
-    padding: 50px 225px;
+    padding: 50px 225px 25px;
   }
 
   .blank__section .fieldset-wrapper {
@@ -372,45 +408,72 @@
   }
 
   .blank__section--color .fieldset-wrapper {
-    width: 750px;
+    width: 786px;
   }
 
   .blank__section legend {
-    top: 65px;
-    left: 50px;
+    top: 70px;
+    left: 113px;
   }
 
   .blank .blank__section label {
-    padding: 20px 80px 20px;
+    padding: 16px 80px 16px;
     margin-right: 0;
-  }
-
-  .blank .blank__section--type {
-    padding-bottom: 65px;
+    margin-bottom: 26px;
   }
 
   .blank .blank__section--color {
-    padding-right: 175px;
+    padding-right: 137px;
   }
 
   .blank .blank__section--color label {
-    width: 250px;
+    width: 262px;
+  }
+
+  .blank .blank__section--name {
+    padding-bottom: 30px;
   }
 
   .blank .blank__section--name label {
     padding: 20px 0;
+    margin-bottom: 0;
+  }
+
+  .blank .blank__section input {
+    padding: 14px 15px;
+    margin-bottom: 20px;
   }
 
   .blank .blank__section--name input {
-    width: 575px;
+    width: 572px;
   }
 
-  .blank .blank__section--email,
   .blank .blank__section--phone {
-    &::after {
+    padding-top: 45px;
+    padding-bottom: 0;
+
+    & .form-icons {
       right: 230px;
-      top: 40px;
+      bottom: 35px;
     }
+  }
+
+  .blank__section--email legend {
+    top: 25px;
+  }
+
+  .blank .blank__section--email {
+    padding-top: 0;
+    padding-bottom: 30px;
+
+    & .form-icons {
+      right: 230px;
+    }
+  }
+
+
+  .blank .blank__section--add {
+    margin-bottom: 25px;
   }
 
   .blank .blank__required {
