@@ -1,10 +1,8 @@
 .catalog-heading {
   display: block;
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
   padding: 68px 0 75px;
   text-align: center;
-  letter-spacing: 1px;
   background-color: #f1f1f1;
 }
 
@@ -13,11 +11,10 @@
 @media (min-width: 768px) {
   .catalog-heading {
     position: relative;
-    width: 768px;
+    /*z-index: -1;*/
     font-size: 43px;
     line-height: 50px;
-    padding: 95px 0 85px;
-    letter-spacing: 1.1px;
+    padding: 97px 0 87px;
 
     &::after {
       position: absolute;
@@ -37,16 +34,14 @@
 
 @media (min-width: 1150px) {
   .catalog-heading {
-    width: 1150px;
     font-size: 53px;
     line-height: 57px;
-    letter-spacing: 1.5px;
     padding: 95px 0 105px;
     margin-bottom: 125px;
 
     &::after {
       height: 20px;
-      background-size: 100% 20px;
+      background-size: 100% 30px;
     }
   }
 }

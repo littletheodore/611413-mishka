@@ -1,9 +1,14 @@
 .footer {
   width: auto;
+  background-color: @light-gray;
+}
+
+.footer .footer-wrapper {
   display: flex;
   flex-direction: column;
+  width: 320px;
   padding: 0 30px;
-  background-color: @light-gray;
+  margin: 0 auto;
   align-items: center;
 }
 
@@ -24,17 +29,6 @@
 
 .footer__social li {
   padding: 23px 20px;
-}
-
-.footer__social .footer-icons {
-  &:hover path,
-  &:focus path {
-    fill: #46c1ae;
-  }
-
-  &:active path {
-    fill: #e5f6f4;
-  }
 }
 
 .footer__social .footer__social--insta {
@@ -67,34 +61,17 @@
   height: 35px;
   right: 0;
   top: 20px;
-
-  & path {
-    fill: @dark-blue;
-  }
-
-  &:hover,
-  &:focus {
-    & path {
-      fill: #46c1ae;
-    }
-  }
-
-  &:active {
-    & path {
-      fill: #e5f6f4;
-    }
-  }
+  fill: @light-blue;
 }
 
 /*tablet-version*/
 
 @media (min-width: 768px) {
-  .footer {
+  .footer .footer-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    width: 768px;
     padding: 0 45px 0 52px;
-    margin: 0 auto;
   }
 
   .footer .page-footer__logo {
@@ -137,10 +114,9 @@
 /*desktop-version*/
 
 @media (min-width: 1150px) {
-  .footer {
+  .footer .footer-wrapper {
     width: 1150px;
     padding: 0 48px 0 52px;
-    margin: 0 auto;
   }
 
   .footer .page-footer__logo {
