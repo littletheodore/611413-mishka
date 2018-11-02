@@ -85,6 +85,9 @@
 
 @media (min-width: 768px) {
   .features {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     background-image: url("../img/hero-tablet@1x.webp"), url("../img/hero-tablet@1x.jpg");
     background-position: center -5px;
 
@@ -109,12 +112,14 @@
   .features .features__list::after {
     position: absolute;
     content: "";
+    left: 0;
     bottom: 0;
-    width: 100%;
+    width: 768px;
     height: 22px;
+    margin: 0 auto;
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat;
-    background-size: 770px 22px;
+    background-size: 100% 22px;
   }
 
   .features__list .features__item {
@@ -155,11 +160,12 @@
   .features .features__list {
     padding: 0 100px;
     width: 1250px;
+  }
 
-    &::after {
-      height: 22px;
-      background-size: 100% 22px;
-    }
+  .features .features__list::after {
+    width: 1250px;
+    height: 22px;
+    background-size: 100% 22px;
   }
 
   .features__list .features__item--link {
