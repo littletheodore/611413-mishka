@@ -31,6 +31,11 @@
 
 .features__list .features__item {
   width: 320px;
+
+  &:hover,
+  &:focus {
+    margin-top: -5px;
+  }
 }
 
 .features__list .features__item--home {
@@ -51,12 +56,6 @@
   color: @white;
   font-weight: bold;
   font-size: 19px;
-
-  &:hover,
-  &:focus {
-    margin-top: -5px;
-    margin-bottom: 10px;
-  }
 
   &:active {
     opacity: 0.5;
@@ -87,7 +86,6 @@
 @media (min-width: 768px) {
   .features {
     background-image: url("../img/hero-tablet@1x.webp"), url("../img/hero-tablet@1x.jpg");
-    background-size: cover;
     background-position: center -5px;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
