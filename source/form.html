@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style-min.css">
+  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+  <script src="js/picturefill.js" async></script>
 </head>
 <body>
   <div style="display:none">
@@ -54,7 +57,7 @@
         <path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z" />
       </symbol>
       <symbol id="icon-mail">
-        <path fill="#333" d="M28 5H4a4 4 0 0 0-4 4v13a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4zM2 10.25l6.999 5.25L2 20.75v-10.5zM30 22c0 1.104-.898 2-2 2H4c-1.103 0-2-.896-2-2l7.832-5.875 4.368 3.277a3 3 0 0 0 3.599 0l4.369-3.277L30 22zm0-1.25l-7-5.25 7-5.25v10.5zm-12.801-2.148c-.35.263-.763.4-1.199.4s-.851-.139-1.2-.4L10.665 15.5l-.833-.625L2 9.001V9c0-1.103.897-2 2-2h24c1.102 0 2 .897 2 2l-12.801 9.602z" />
+        <path d="M28 5H4a4 4 0 0 0-4 4v13a4 4 0 0 0 4 4h24a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4zM2 10.25l6.999 5.25L2 20.75v-10.5zM30 22c0 1.104-.898 2-2 2H4c-1.103 0-2-.896-2-2l7.832-5.875 4.368 3.277a3 3 0 0 0 3.599 0l4.369-3.277L30 22zm0-1.25l-7-5.25 7-5.25v10.5zm-12.801-2.148c-.35.263-.763.4-1.199.4s-.851-.139-1.2-.4L10.665 15.5l-.833-.625L2 9.001V9c0-1.103.897-2 2-2h24c1.102 0 2 .897 2 2l-12.801 9.602z" />
       </symbol>
       <symbol id="icon-map-pin">
         <path fill="#FFF" d="M56.334 9.228c-12.892-12.305-33.773-12.305-46.667 0-12.891 12.297-12.891 32.248 0 44.542 0 0 23.318 21.832 23.318 47.031 0-25.199 23.343-47.031 23.343-47.031 12.897-12.294 12.897-32.245.006-44.542z" />
@@ -149,7 +152,7 @@
       <fieldset class="blank__section blank__section--color">
         <legend class="blank__section--title">Цвет:</legend>
         <div class="fieldset-wrapper">
-          <input type="checkbox" name="color-white" id="color-white" class="visually-hidden" checked disabled><label
+          <input type="checkbox" name="color-white" id="color-white" class="visually-hidden" checked><label
             for="color-white">Белый</label>
           <input type="checkbox" name="color-grey" id="color-grey" class="visually-hidden" checked><label for="color-grey">Серый</label>
           <input type="checkbox" name="color-tiffani" id="color-tiffani" class="visually-hidden"><label for="color-tiffani">"Тиффани"</label>
@@ -172,12 +175,18 @@
         <legend class="blank__section--title">тел</legend>
         <div class="fieldset-wrapper">
           <input type="tel" name="phone" id="phone" placeholder="+7 XXX XXX XX XX &#8432;" required>
+          <svg class="form-icons" width="25" height="24">
+              <use xlink:href="#icon-phone"></use>
+            </svg>
         </div>
       </fieldset>
       <fieldset class="blank__section blank__section--email">
         <legend class="blank__section--title">E-mail</legend>
         <div class="fieldset-wrapper">
           <input type="email" name="email" id="email" placeholder="Ваш Email &#8432;" required>
+          <svg class="form-icons" width="32" height="32">
+              <use xlink:href="#icon-mail"></use>
+            </svg>
         </div>
       </fieldset>
       <fieldset class="blank__section blank__section--add">
@@ -191,31 +200,33 @@
     </form>
   </main>
   <footer class="footer">
-    <a class="page-footer__logo" href="#"><span class="visually-hidden">Логотип</span>
-      <svg width="102" height="34">
-        <use xlink:href="#icon-logo-footer"></use>
-      </svg>
-    </a>
-    <ul class="footer__social">
-      <li class="footer__social--insta"><a href="#"><span class="visually-hidden">Страница в Instagram</span>
-          <svg width="22" height="22">
-            <use xlink:href="#icon-insta"></use>
-          </svg></a></li>
-      <li class="footer__social--fb"><a href="#"><span class="visually-hidden">Страница в Facebook</span>
-          <svg width="15" height="28">
-            <use xlink:href="#icon-fb"></use>
-          </svg></a></li>
-      <li class="footer__social--tw"><a href="#"><span class="visually-hidden">Страница в Twitter</span>
-          <svg width="24" height="20">
-            <use xlink:href="#icon-twitter"></use>
-          </svg></a></li>
-    </ul>
-    <a class="footer__copyright" href="https://up.htmlacademy.ru/adaptive/15">Разработано <span class="visually-hidden">Логотип
-        HtmlAcademy</span>
-      <svg class="footer__copyright--logo" width="27" height="34">
-        <use xlink:href="#icon-logo-htmlacademy"></use>
-      </svg>
-    </a>
-  </footer>
+      <div class="footer-wrapper">
+      <a class="page-footer__logo" href="index.html"><span class="visually-hidden">Логотип</span>
+        <svg class="footer-icons" width="102" height="34">
+          <use xlink:href="#icon-logo-footer"></use>
+        </svg>
+      </a>
+      <ul class="footer__social">
+        <li class="footer__social--insta"><a href="#"><span class="visually-hidden">Страница в Instagram</span>
+            <svg class="footer-icons" width="22" height="22">
+              <use xlink:href="#icon-insta"></use>
+            </svg></a></li>
+        <li class="footer__social--fb"><a href="#"><span class="visually-hidden">Страница в Facebook</span>
+            <svg class="footer-icons" width="15" height="28">
+              <use xlink:href="#icon-fb"></use>
+            </svg></a></li>
+        <li class="footer__social--tw"><a href="#"><span class="visually-hidden">Страница в Twitter</span>
+            <svg class="footer-icons" width="24" height="20">
+              <use xlink:href="#icon-twitter"></use>
+            </svg></a></li>
+      </ul>
+      <a class="footer__copyright" href="https://up.htmlacademy.ru/adaptive/15">Разработано <span class="visually-hidden">Логотип
+          HtmlAcademy</span>
+        <svg class="footer__copyright--logo footer-icons" width="27" height="34">
+          <use xlink:href="#icon-logo-htmlacademy"></use>
+        </svg>
+      </a>
+    </div>
+    </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/pict.."></script>
   <script src=js/form.js> </script> </body> </html>
